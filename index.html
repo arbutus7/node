@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Visualization</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/viewer.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="scatter.css" charset="utf-8">
+<div class="bg-primary text-white rounded-0">
+ <div class="container">
+   <div class="row">
+     <div class="col-md">
+       <h2>demand forecast <small class="h6">v1.0</small></h2>
+       <!--<p class="lead">JavaScript image viewer.</p>-->
+     </div>
+
+   </div>
+ </div>
+</div>
+    <!--<h2> Scatter plot graph for Anomaly detection </h2>-->
+
+  <div class="box1">
+    <div id="chart"></div>
+    Scatter Graph: <input type="file" id="file_input" accept=".csv" /><br>
+    Line graph   : <input type="file" id="file_input2" accept=".csv" /><br>
+    Table        : <input type="file" id="file_input3" accept=".csv" /><br>
+    <div class="box2">
+    <select name="division" id="id-lang0">
+    <option value="">division선택</option>
+    <option value="camera" >camera</option>
+    <option value="battleground" >battleground</option>
+ 
+    </select>
+    
+    <select name="chm" id="id-lang">
+    <option value="">model선택</option>
+    <option value="chamber1" >chamber1</option>
+    <option value="chamber2" >chamber2</option>
+    <option value="chamber3" >chamber3</option>
+    </select>
+    <input type="button" class="btn btn-secondary" name="chamber1" value="chamber1">
+    <input type="button" class="btn btn-secondary"name="chamber2" value="chamber2">
+    <input type="button" class="btn btn-secondary"name="chamber3" value="chamber3">
+
+
+  <div class="box2">
+
+      <form action = "http://localhost:8081/python" method = "GET">
+         X: <input type = "text" name = "first_name" id="1">  <br>
+         Y: <input type = "text" name = "last_name" id="2">
+         chamber: <input type = "text" name = "chmber_name" id="3">
+
+         <button type="submit" class="btn btn-primary">Submit</button>
+
+      </form>
+ </div>
+      <select id="selectbox">
+	<option value="_1">Fahrenheit</option>
+	<option value="_2">Celsius</option>
+          <button onclick="openTextFile()">Open</button>
+<div id="output">...</div>
+</select>
+  </head>
+
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+
+
+
+   <div id="scatter"></div>
+
+<!--<svg id="chart" width="900" height="410"></svg>-->
+   <script src="http://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+    <!--<script src="http://d3js.org/d3.v5.min.js"></script>-->
+    <!--<script src="http://d3js.org/d3.v5.min.js" charset="utf-8"></script>-->
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="linetest.js" charset="utf-8"></script>
+ <!--<script src="table.js" charset="utf-8"></script>
+    <!--<script src="scatter.js" charset="utf-8"></script>-
+<script src="table.js" charset="utf-8"></script>->
+
+
+  </body>
+
+
+
+
+
+ </html>
